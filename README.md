@@ -1,32 +1,34 @@
-# 202242700-janaalkahlan-assignment1
+# 202242700-janaalkahlan-assignment2
 
-# Personal Web Portfolio – Assignment 1
+# Personal Web Portfolio – Assignment 2
 
 ## 📌 Project Description
-This project is a simple personal portfolio website built as part of Assignment 1.  
-The purpose of this project is to practice the basics of HTML, CSS, and JavaScript, apply responsive design principles, and use AI-assisted development tools responsibly.
+This project is a continuation of Assignment 1, where the personal portfolio website has been enhanced with interactive features and improved user experience.
 
-The website includes an About section, Projects section, Skills section, and a Contact form.
+The goal of this assignment is to make the website more dynamic, modern, and user-friendly using JavaScript and better design practices.
 
 ---
 
 ## 🛠 Technologies Used
-- HTML 
-- CSS3  
-- JavaScript
+- HTML  
+- CSS  
+- JavaScript  
 
 ---
 
 ## ✨ Features
-- Responsive layout for desktop, tablet, and mobile devices  
-- Navigation menu with a hamburger menu for small screens  
-- Multiple content sections (About, Projects, Skills, Contact)  
-- Simple contact form (front-end only, no backend)
+- Responsive design for desktop, tablet, and mobile  
+- Navigation with hamburger menu  
+- Theme toggle (light/dark mode using localStorage)  
+- Dynamic project filtering by category  
+- Live project search functionality  
+- Contact form validation with user feedback  
+- Smooth animations and transitions  
 
 ---
 
 ## 📁 Project Structure
-assignment-1/
+assignment-2/  
 ├── index.html  
 ├── css/  
 │   └── styles.css  
@@ -42,20 +44,24 @@ assignment-1/
 ---
 
 ## ▶️ How to Run the Project Locally
-1. Clone the repository:
-   git clone https://github.com/Jana-101/202242700-janaalkahlan-assignment1.git
-2. Open the project folder.
-3. Open the `index.html` file in any modern web browser.
+1. Clone the repository:  
+   git clone https://github.com/Jana-101/202242700-janaalkahlan-assignment2.git  
 
-No additional setup or dependencies are required.
+2. Open the project folder  
+
+3. Open `index.html` in any modern browser  
+
+No additional setup is required.
 
 ---
 
 ## 🤖 AI Usage Summary
-AI tools (ChatGPT and Claude) were used to support understanding the assignment requirements and reviewing the project structure and code.
-Detailed information about AI usage is documented in docs/ai-usage-report.md.
+AI tools (ChatGPT and Claude) were used to assist with brainstorming ideas, suggesting features, improving interactivity, refining design, cleaning the code, and fixing errors and bugs.
+
+Detailed documentation of AI usage is provided in:  
+`docs/ai-usage-report.md`
 
 ---
 
 ## 🔗 Repository Link
-https://github.com/Jana-101/202242700-janaalkahlan-assignment1
+https://github.com/Jana-101/202242700-janaalkahlan-assignment2

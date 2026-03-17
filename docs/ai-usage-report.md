@@ -1,34 +1,63 @@
-# AI Usage Report – Assignment 1
+# AI Usage Report – Assignment 2
 
-## Tools Used & Use Cases
-- **ChatGPT** was used to understand the assignment requirements, plan the project structure, and review HTML, CSS, and JavaScript code.
-- **Claude** was used as an additional AI assistant to help with coding suggestions and clarity during development.
+## Tools Used & How They Were Used
 
-AI tools were mainly used for guidance, explanations, and validation rather than direct copying.
+### ChatGPT
+ChatGPT was used during the planning, setup, and refinement stages of the project.
+
+- I first created a general idea of my portfolio structure and basic features.
+- I used ChatGPT to:
+  - Help set up the GitHub repository and project folder structure
+  - Improve my initial ideas
+  - Suggest more relevant and interactive features (such as filtering and search)
+  - Guide design improvements and usability enhancements
+- ChatGPT was also used to review parts of the project and suggest improvements in clarity and user experience.
+
+### Claude
+Claude was mainly used during the development stage.
+
+- I provided my initial code, which was not fully organized.
+- Claude helped to:
+  - Clean and restructure the code
+  - Improve readability and consistency
+  - Add comments
+  - Refine CSS for better visual design
+  - Fix issues and bugs
+
+AI tools were used as assistants to improve my work, not to generate a complete solution.
 
 ---
 
 ## Benefits & Challenges
-**Benefits:**
-- Helped clarify assignment instructions and expectations.
-- Assisted in organizing the project structure.
-- Provided suggestions for clean and responsive code.
 
-**Challenges:**
-- Some suggestions needed adjustment to better fit the project requirements.
-- AI-generated ideas sometimes required simplification.
+### Benefits
+- Helped transform initial ideas into more structured and relevant features  
+- Improved code quality and organization  
+- Provided guidance on enhancing user experience and interactivity  
+- Assisted in identifying and fixing errors  
+
+### Challenges
+- Some AI suggestions were too complex and needed simplification  
+- Certain design or code suggestions required modification to match assignment requirements  
+- I needed to verify and adjust outputs to ensure correctness  
 
 ---
 
 ## Learning Outcomes
 Through using AI tools, I learned:
-- How to structure a simple portfolio website using HTML, CSS, and JavaScript.
-- How to apply responsive design concepts.
-- How to critically review and adapt AI-generated suggestions instead of using them directly.
+
+- How to plan and structure a web project from setup to implementation  
+- How to implement interactive features such as filtering, search, and theme persistence  
+- How to improve code structure and readability  
+- How to critically evaluate AI-generated suggestions instead of directly using them  
 
 ---
 
 ## Responsible Use & Modifications
-All AI-generated suggestions were reviewed, modified, and customized to ensure correctness, originality, and alignment with academic integrity guidelines.  
-The final code reflects my own understanding and implementation of the concepts learned.
+All AI-generated content was carefully reviewed.
 
+- I modified the code to match my project requirements  
+- I ensured I understood the implemented features  
+- I avoided copying full solutions without changes  
+
+The final project reflects my understanding with AI used as a support tool.

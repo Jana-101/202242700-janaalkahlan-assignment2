@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -7,8 +6,7 @@
   <title>Jana Alkahlan — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -107,10 +105,36 @@
       <p class="section__eyebrow reveal">02 — Projects</p>
       <h2 class="section__heading reveal">Selected <em>Work</em></h2>
 
-      <div class="projects__grid">
+      <!-- USER GUIDANCE -->
+      <p class="projects__hint reveal">Use the filters or search below to explore projects</p>
+
+      <!-- SEARCH + FILTERS -->
+      <div class="projects__controls reveal">
+        <div class="projects__search-wrap">
+          <span class="projects__search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="text"
+            id="projectSearch"
+            class="projects__search"
+            placeholder="Search projects by title or description…"
+            aria-label="Search projects"
+          />
+          <button class="projects__search-clear" id="searchClear" aria-label="Clear search" hidden>✕</button>
+        </div>
+
+        <div class="filter-btns" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+          <button class="filter-btn" data-filter="desktop">Desktop</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+      </div>
+
+      <!-- PROJECT GRID -->
+      <div class="projects__grid" id="projectsGrid">
 
         <!-- Card 1 -->
-        <article class="card reveal">
+        <article class="card reveal" data-category="machine-learning" data-title="Academic Risk Predictor" data-desc="Identified risk factors linked to poor academic performance by designing and administering a student survey, then building end-to-end ML classification models in Python — data preprocessing, statistical analysis, and visualizations to turn raw data into actionable insights.">
           <div class="card__top card__top--rose">
             <span class="card__num">01</span>
             <span class="card__emoji" aria-hidden="true">📊</span>
@@ -132,7 +156,7 @@
         </article>
 
         <!-- Card 2 -->
-        <article class="card reveal">
+        <article class="card reveal" data-category="desktop" data-title="Term Schedule Visualizer" data-desc="A desktop application that reads academic Excel schedules and dynamically renders visual timetables. Designed using OOP class diagrams with fully custom programmatic graphical output — no pre-built chart components used.">
           <div class="card__top card__top--terra">
             <span class="card__num">02</span>
             <span class="card__emoji" aria-hidden="true">🗓️</span>
@@ -154,7 +178,7 @@
         </article>
 
         <!-- Card 3 -->
-        <article class="card reveal">
+        <article class="card reveal" data-category="desktop" data-title="Folder Structure Visualizer" data-desc="Applied the Composite and Strategy design patterns to model and visualize hierarchical file-folder systems. Recursively traverses directories, calculates sizes, and supports multiple visualization modes through a clean, extensible architecture.">
           <div class="card__top card__top--sage">
             <span class="card__num">03</span>
             <span class="card__emoji" aria-hidden="true">📁</span>
@@ -176,7 +200,7 @@
         </article>
 
         <!-- Card 4 — Featured full-width -->
-        <article class="card card--featured reveal">
+        <article class="card card--featured reveal" data-category="web" data-title="Meras Mentorship Platform" data-desc="A web-based mentorship and career exploration platform helping students make informed academic decisions through task-based major simulations and peer guidance from students with relevant backgrounds. Built across frontend, backend, and database layers — combining software engineering principles with real-world system design and scalable architecture.">
           <div class="card__top card__top--blush">
             <span class="card__num">04</span>
             <span class="card__emoji" aria-hidden="true">🌱</span>
@@ -201,6 +225,14 @@
         </article>
 
       </div>
+
+      <!-- Empty state -->
+      <div class="projects__empty" id="projectsEmpty" hidden>
+        <span class="projects__empty-icon" aria-hidden="true">◎</span>
+        <p>No projects found</p>
+        <span>Try a different search term or filter</span>
+      </div>
+
     </div>
   </section>
 
@@ -270,31 +302,44 @@
             I'd love to hear from you.
           </p>
           <div class="contact__links">
-            <a href="mailto:jana.kahlan@gmail.com" class="contact__pill">✉ jana.kahlan@gmail.com</a>
-            <a href="https://github.com/Jana-101" target="_blank" rel="noopener" class="contact__pill">GitHub ↗</a>
+<a href="mailto:jana.kahlan@gmail.com" class="contact__pill">
+  ✉ jana.kahlan@gmail.com
+</a>            <a href="https://github.com/Jana-101" target="_blank" rel="noopener" class="contact__pill">GitHub ↗</a>
             <a href="https://www.linkedin.com/in/jana-alkahlan-121173356" target="_blank" rel="noopener" class="contact__pill">LinkedIn ↗</a>
           </div>
         </div>
 
-        <form class="contact__form reveal" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required />
-            <span class="field__err" id="nameError"></span>
+        <div class="contact__right reveal">
+          <!-- USER GUIDANCE -->
+          <p class="form__hint">Fill out all fields and submit your message — I'll get back to you soon.</p>
+
+          <!-- Error summary -->
+          <div class="form__error-summary" id="formErrorSummary" hidden>
+            <span aria-hidden="true">⚠</span> Please fix the errors below before submitting.
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            <span class="field__err" id="emailError"></span>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
-            <span class="field__err" id="messageError"></span>
-          </div>
-          <button type="submit" class="btn btn--filled btn--full">Send Message</button>
-          <div class="form__success" id="formSuccess">Message sent! I'll get back to you soon.</div>
-        </form>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+              <span class="field__err" id="nameError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <span class="field__err" id="emailError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+              <span class="field__err" id="messageError" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--filled btn--full" id="submitBtn">Send Message</button>
+            <div class="form__success" id="formSuccess" role="status">
+              <span aria-hidden="true">✓</span> Message sent successfully! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
 
       </div>
     </div>
@@ -302,11 +347,11 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Jana Alkahlan</p>
-    </div>
-  </footer>
+  <div class="container">
+    <p>© 2026 Jana Alkahlan</p>
+  </div>
+</footer>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
